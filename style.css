@@ -1,0 +1,294 @@
+
+        /* Основные стили */
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f5;
+            color: #910223;
+            overflow-x: hidden;
+        }
+        
+
+        
+        /* Сердечки в фоне */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 105, 180, 0.5);
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Шапка */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #EF6F8D, #DF0538);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .video-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff5f9;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 58, 98, 0.2);
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+            background: #000;
+        }
+        
+        .video-caption {
+            padding: 15px;
+            font-style: italic;
+            color: #8b3a62;
+            background: white;
+            margin: 0;
+        }
+        
+        
+        /* Галерея фотографий */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        /* Таймлайн */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 40px;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #EF6F8D;
+            top: 50px;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #DF0538;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -10px;
+        }
+        
+        .right::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #DF0538;
+            margin-bottom: 5px;
+        }
+        
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #DF0538, #EF6F8D);
+            color: white;
+        }
+        
+        .heart-btn {
+            background: none;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #EF4069;
+            transition: transform 0.3s;
+        }
+        
+        .heart-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        .time-capsule-section {
+    background: linear-gradient(135deg, #fff0f5, #ffd6e7);
+    padding: 40px 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+}
+        .photos {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f7;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .photos h2 {
+            color: #d23669;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .photo-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            aspect-ratio: 1/1;
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .photo-item::after {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: #ff6b81;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .photo-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 500px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+        @font-face {
+            font-family: 'oswald';
+            src: url(../fonts/static/Oswald-Bold.ttf);
+        }
